@@ -3,7 +3,6 @@
 <head>
 	<meta charset="utf-8">
 	<title>Verð</title>
-	<link rel="stylesheet" type="text/css" href="/static/normalize.css">
 	<link rel="stylesheet" type="text/css" href="/static/skeleton.css">
 </head>
 <body>
@@ -25,7 +24,7 @@
 		{% endfor %}
 	</table>
 	<footer>
-		<a href="/">Heim</a>
+		<a href="/" class="button button-primary">Heim</a>
 	</footer>
 
 </body>

@@ -22,6 +22,12 @@ def index():
 			i["company"] = i["company"].replace(" ","")
 			companies.append(i["company"])
 
+	compnumbers = len(companies)
+	companyPictures = []
+	for i in companies:
+		companyName = i+".png"
+		companyPictures.append(companyName)
+
 	#Talið ódýrustu bensín stöð
 	for i in range(le - 1):
 		c=i
@@ -32,7 +38,7 @@ def index():
 		if minpriceD > data[i]["diesel"]:
 			minpriceD = data[i]["diesel"]
 			companyD = data[i]["company"]
-	return render_template("index.tpl",minpriceD=minpriceD,minpriceP=minpriceP,companyP=companyP,companyD=companyD,companies=companies)
+	return render_template("index.tpl",minpriceD=minpriceD,minpriceP=minpriceP,companyP=companyP,companyD=companyD,links=zip(companies,companyPictures))
 
 @app.route("/company/<company>")
 def company(company):

@@ -28,6 +28,10 @@
 
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+img {
+  max-height: 2em;
+  max-width: 2em;
+}
 .container {
   position: relative;
   width: 100%;

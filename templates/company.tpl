@@ -3,7 +3,6 @@
 <head>
 	<meta charset="utf-8">
 	<title>{{c}}</title>
-	<link rel="stylesheet" type="text/css" href="/static/normalize.css">
 	<link rel="stylesheet" type="text/css" href="/static/skeleton.css">
 
 </head>
@@ -25,7 +24,7 @@
 	</table>
 	<h3>Fjöldi stöðva: {{cnt}}</h3>
 	<footer>
-		<a href="/">Heim</a>
+		<a href="/"class="button button-primary">Heim</a>
 	</footer>
 </body>
 </html>

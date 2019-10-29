@@ -4,17 +4,30 @@
 	<meta charset="utf-8">
 	<title>Bennsínstöðvar</title>
 	<link rel="stylesheet" type="text/css" href="/static/styles.css">
-	<link rel="stylesheet" type="text/css" href="/static/normalize.css">
 	<link rel="stylesheet" type="text/css" href="/static/skeleton.css">
 
 </head>
 <body>
 	<h3>Söluaðlar eldsneytis á íslandi</h3>
-	{% for i in companies %}
-		<div><a href="/company/{{i}}" class="button button-primary">{{i}}</a></div>
+	{% for i,x in links %}
+		<div><img src="/static/{{x}}"><a href="/company/{{i}}" class="button button-primary">{{i}}</a></div>
 	{% endfor %}
 	<h4>Besta Verðið</h4>
-	<div>Bensín 95 er ódýrt á {{minpriceP}} hjá {{companyP}}</div>
-	<div>Dísel er ódýrt á {{minpriceD}} hjá {{companyD}}</div>
+	<table>
+		<tr>
+			<th>Fyrirtæki</th>
+			<th>Bensín</th>
+		</tr>
+		<td>{{companyP}}</td>
+		<td>{{minpriceP}}</td>
+	</table>
+	<table>
+		<tr>
+			<th>Fyrirtæki</th>
+			<th>Dísel</th>
+		</tr>
+		<td>{{companyD}}</td>
+		<td>{{minpriceD}}</td>
+	</table>
 </body>
 </html>
